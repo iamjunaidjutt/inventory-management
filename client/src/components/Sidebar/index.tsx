@@ -2,6 +2,7 @@
 
 import { useAppDispatch, useAppSelector } from "@/app/redux";
 import { setIsSidebarCollapsed } from "@/state";
+import Image from "next/image";
 import {
 	Archive,
 	CircleDollarSign,
@@ -80,7 +81,13 @@ const Sidebar = () => {
 					isSidebarCollapsed ? "px-5" : "px-8"
 				}`}
 			>
-				<div>logo</div>
+				<Image
+					src={"https://ap-south-1.console.aws.amazon.com/logo.png"}
+					alt="edstock-logo"
+					width={50}
+					height={50}
+					className="rounded-full h-full object-cover"
+				/>
 				<h1
 					className={`${
 						isSidebarCollapsed ? "hidden" : "block"
